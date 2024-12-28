@@ -4,8 +4,12 @@ import {
   HarmBlockThreshold,
 } from "@google/generative-ai";
 
-const apiKey = "AIzaSyAZJKcUtlC-15I7_uPqcMbPQ12H_NwYb4U";
-const genAI = new GoogleGenerativeAI(apiKey);
+const GEMINIKEY = import.meta.env.VITE_GEMINIKEY;
+// console.log("GEMINIKEY:", import.meta.env.VITE_GEMINIKEY);
+if (!GEMINIKEY) {
+  throw new Error("GEMINIKEY is missing. Please check your .env file.");
+}
+const genAI = new GoogleGenerativeAI(GEMINIKEY);
 
 const model = genAI.getGenerativeModel({
   model: "gemini-2.0-flash-exp",

@@ -69,3 +69,46 @@
     display: none;
   }
 }
+/* Dark Mode Styles */
+.sidebar.dark-mode {
+  background-color: #2c2f3d; /* Dark background for sidebar */
+}
+
+.sidebar.dark-mode .new-chat {
+  background-color: #3b4150;
+  color: #fff;
+}
+
+.sidebar.dark-mode .new-chat:hover {
+  background-color: #4a4f5b;
+}
+
+.sidebar.dark-mode .recent-entry {
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar.dark-mode .recent-entry:hover {
+  background-color: #444;
+}
+
+.sidebar.dark-mode .bottom-item {
+  color: #fff;
+}
+
+.sidebar.dark-mode .recent-title {
+  color: #ccc;
+}
+
+/* Optionally, for a smooth transition */
+.sidebar,
+.sidebar.dark-mode {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -30,6 +30,7 @@
   color: #c4c7c5;
   font-weight: 500;
   padding: 20px;
+  font-style: bold;
 }
 
 .main .greet span {
@@ -75,7 +76,7 @@
 
 .main-bottom {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   max-width: 900px;
   padding: 0px 20px;
@@ -193,4 +194,60 @@
   .search-box div {
     gap: 5px;
   }
+}
+
+/* Dark Mode Styles */
+.main.dark-mode {
+  background-color: #333;
+  color: white;
+}
+body.dark-mode {
+  background-color: #181818;
+  color: #fff;
+}
+
+.dark-mode .main {
+  background-color: #181818;
+}
+
+.dark-mode .nav {
+  background-color: #333;
+}
+
+.dark-mode .card {
+  background-color: #382424; /* Keep the card's background color light */
+  color: #fff; /* Change text color to white */
+}
+
+.dark-mode .card p {
+  color: #fff; /* Change text color inside the card to white */
+}
+
+.dark-mode .search-box {
+  background-color: #b1a0a0;
+  color: #fff; /* Ensure input text color is white */
+}
+
+.dark-mode .search-box input {
+  color: #fff; /* Change text color inside input box */
+}
+
+.dark-mode .bottom-info {
+  color: #ccc;
+}
+
+.dark-mode-toggle input {
+  display: none;
+}
+
+.dark-mode-toggle label {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Optionally, for a smooth transition */
+body,
+.main {
+  transition: background-color 0.3s, color 0.3s;
 }

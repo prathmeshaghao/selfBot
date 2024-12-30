@@ -5,6 +5,7 @@ import { Context } from "../../context/context";
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
+  const [darkMode, setDarkMode] = useState(false); // Add state for dark mode
   const { onSent, prevPrompt, setRecentPrompt, newChat } = useContext(Context);
 
   const loadPrompt = async (prompt) => {
@@ -12,6 +13,10 @@ const Sidebar = () => {
     await onSent(prompt);
   };
 
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
   return (
     <div className="sidebar">
       <div className="top">
@@ -41,6 +46,13 @@ const Sidebar = () => {
       </div>
 
       <div className="bottom">
+        <div className="bottom-item recent-entry" onClick={toggleDarkMode}>
+          {" "}
+          {/* Add toggle button */}
+          <img src={assets.theme_icon} alt="" />{" "}
+          {/* You can add a theme icon */}
+          {extended ? <p>Toggle Dark Mode</p> : null}
+        </div>
         <div className="bottom-item recent-entry">
           <img src={assets.question_icon} alt="" />
           {extended ? <p>Help</p> : null}

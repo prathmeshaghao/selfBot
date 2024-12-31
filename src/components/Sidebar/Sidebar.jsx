@@ -46,7 +46,7 @@ const Sidebar = () => {
       </div>
 
       <div className="bottom">
-        <div className="bottom-item recent-entry" onClick={toggleDarkMode}>
+        <div >
           {" "}
           {/* Add toggle button */}
           <img src={assets.theme_icon} alt="" />{" "}
